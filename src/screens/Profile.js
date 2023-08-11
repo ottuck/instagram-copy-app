@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const FriendProfile = () => {
+const Profile = () => {
   return (
     <View>
-      <Text>FriendProfile</Text>
+      <Text>Profile</Text>
     </View>
   )
 }
 
-export default FriendProfile
+export default Profile
