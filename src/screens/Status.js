@@ -2,9 +2,9 @@ import { View, Text, StyleSheet, StatusBar, Image } from 'react-native'
 import React, { useEffect, useState, useRef } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const Status = (route, navigation) => {
-  //name, image 객체를 받아서 parameter를 읽는다
-  // const { name, image } = route.params;
+const Status = ({route, navigation}) => {
+  // Stories.js 에서 name, image 객체를 받아서 parameter를 읽는다
+  const { name, image } = route.params;
 
   return (
     <SafeAreaView style={styles.statusSafeAreaView}>
@@ -23,7 +23,6 @@ const Status = (route, navigation) => {
     </SafeAreaView>
   )
 }
-
 export default Status
 
 const styles = StyleSheet.create({
