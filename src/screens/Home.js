@@ -2,6 +2,7 @@ import { View, Text, StatusBar, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { FontAwesome, Feather } from '@expo/vector-icons';
+import Stories from '../components/Stories';
 
 const Home = () => {
   return (
@@ -10,17 +11,18 @@ const Home = () => {
           backgroundColor={'white'}
           barStyle={'dark-content'}
         />
-        <View style={styles.header}>
+        <View style={styles.homeHeader}>
           <View>
             <Text style={styles.instagramText}>Instagram</Text>
           </View>
-          <View style={styles.headerIconArea}>
-            <FontAwesome name="plus-square-o" style={styles.headerIcon}/>
-            <Feather name="navigation" style={styles.headerIcon}/>
+          <View style={styles.homeHeaderIconArea}>
+            <FontAwesome name="plus-square-o" style={styles.homeHeaderIcon}/>
+            <Feather name="navigation" style={styles.homeHeaderIcon}/>
           </View>
         </View>
         <ScrollView>
-          {/* 내용 */}
+          <Stories />
+
         </ScrollView>
     </SafeAreaView>
   )
@@ -29,7 +31,7 @@ const Home = () => {
 export default Home
 
 const styles = StyleSheet.create({
-  header: {
+  homeHeader: {
     justifyContent: 'space-between',
     flexDirection: 'row',
     paddingHorizontal: 15,
@@ -39,12 +41,12 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '500',
   },
-  headerIconArea: {
+  homeHeaderIconArea: {
     justifyContent: 'center',
     alignContent: 'center',
     flexDirection: 'row',
   }, 
-   headerIcon: {
+  homeHeaderIcon: {
     fontSize: 24,
     paddingHorizontal: 10
    }
