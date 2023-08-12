@@ -3,6 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { FontAwesome, Feather } from '@expo/vector-icons';
 import Stories from '../components/Stories';
+import Posts from '../components/Posts';
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
         </View>
         <ScrollView>
           <Stories />
-
+          <Posts />
         </ScrollView>
     </SafeAreaView>
   )

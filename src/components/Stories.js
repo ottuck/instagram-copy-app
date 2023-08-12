@@ -48,25 +48,24 @@ const Stories = () => {
         >
             {storyInfo.map((data, index) => {
                 return (
-                    <TouchableOpacity 
+                    <TouchableOpacity
                         key={index}
                         // 누르면 'Status' 값과 name, imaage를 가지고 이동하게 
-                        onPress={() => navigation.push('Status', 
-                        {
-                            name : data.name,
-                            image : data.image,
+                        onPress={() => navigation.push('Status', {
+                            name: data.name,
+                            image: data.image,
                         })}
                     >
                         <View style={styles.storyIconContainer}>
                             {data.id === 1 ? (
                                 <View style={styles.storyIconPlusButton}>
-                                    <Entypo name="circle-with-plus" 
-                                    style={styles.storyPlusButton} />
+                                    <Entypo name="circle-with-plus"
+                                        style={styles.storyPlusButton} />
                                 </View>
                             ) : null}
                             <View style={styles.storyIconCircle}>
-                                <Image source={data.image} 
-                                style={styles.storyImage} />
+                                <Image source={data.image}
+                                    style={styles.storyImage} />
                             </View>
                             <Text></Text>
                         </View>
